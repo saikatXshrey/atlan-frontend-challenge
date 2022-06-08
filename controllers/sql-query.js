@@ -1,11 +1,31 @@
+const { StatusCodes } = require("http-status-codes");
 const connection = require("../db/connect");
 
 const sqlQuery = async (req, res) => {
-  const { q } = req.query;
+  const { q, limit } = req.query;
 
-  await connection.query(q, (error, results) => {
-    if (error) throw error;
-    res.json(results);
+  let query = q;
+
+  // remove ';'
+  if (query.includes(";")) {
+    query = query.substring(0, query.length - 1);
+  }
+
+  // add limit
+  if (limit) {
+    query = `${query} limit ${limit};`;
+  }
+
+  await connection.query(query, (error, results) => {
+    // error handling
+    if (error) {
+      res
+        .status(StatusCodes.BAD_REQUEST)
+        .json({ error: "Error in SQL syntax;" });
+    }
+
+    // result
+    res.status(StatusCodes.OK).json(results);
   });
 };
 
