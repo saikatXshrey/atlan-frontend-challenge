@@ -11,9 +11,20 @@ morgan("tiny");
 app.use(cors());
 
 // modules
-const connection = require("./db/connect");
+const connectDB = require("./db/connect");
 
 // server start
 const port = process.env.PORT || 4000;
 
-app.listen(port, console.log("Server"));
+const start = async () => {
+  try {
+    await connectDB();
+    app.listen(port, () => {
+      console.log(`Server : http://localhost:${port}`);
+    });
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+start();
