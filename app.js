@@ -8,17 +8,22 @@ const app = express();
 
 // initialize middleware
 morgan("tiny");
+app.use(express.json());
 app.use(cors());
 
 // modules
-const connectDB = require("./db/connect");
+const connection = require("./db/connect");
+const { sqlQuery } = require("./controllers");
+
+// end-point
+app.get("/", sqlQuery);
 
 // server start
 const port = process.env.PORT || 4000;
 
 const start = async () => {
   try {
-    await connectDB();
+    await connection;
     app.listen(port, () => {
       console.log(`Server : http://localhost:${port}`);
     });
