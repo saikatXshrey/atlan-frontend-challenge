@@ -7,7 +7,7 @@ const cors = require("cors");
 const app = express();
 
 // initialize middleware
-morgan("tiny");
+app.use(morgan("tiny"));
 app.use(express.json());
 app.use(cors());
 
