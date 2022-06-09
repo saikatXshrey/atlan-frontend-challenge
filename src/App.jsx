@@ -1,7 +1,14 @@
 import React from "react";
 
+// components
+import { QueryEditor } from "./components";
+
 const App = () => {
-  return <div>App</div>;
+  return (
+    <>
+      <QueryEditor />
+    </>
+  );
 };
 
 export default App;
