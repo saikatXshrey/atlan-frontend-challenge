@@ -1,7 +1,7 @@
 import axios from "axios";
 
-const queryServer = (q) => {
-  const { data } = axios({
+const queryServer = async (q) => {
+  const { data } = await axios({
     method: "GET",
     url: "http://localhost:4000",
     params: { q },
