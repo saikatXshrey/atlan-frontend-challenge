@@ -1,70 +1,71 @@
-# Getting Started with Create React App
+# Atlan SQL Query Editor
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Web App to Run SQL Query and get results
 
-## Available Scripts
+## Brief Working
 
-In the project directory, you can run:
+### Front End :
 
-### `npm start`
+→ Built using `React.Js`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+→ Styling : `Material-UI`
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+→ Form : `Formik`
 
-### `npm test`
+→ Client takes in the query from user and send request to Server using `Axios`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+→ Server sends back the response which is rendered on the client-side in the form of `Data-Grid/Alert`
 
-### `npm run build`
+→ Validation has been handled on frontend
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Back End :
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+→ Built using `Node.Js`, `Express.Js`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+→ Database : `MySQL` hosted on `Clever-Cloud`
 
-### `npm run eject`
+→ Middleware : `morgan`, `cors`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+→ Server accepts the SQL query coming from client & forwards it to `mysql` plugin that processes & returns the response in JSON format
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+→ The JSON response is then sent to front-end
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+#### `P.S` :
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Due to some recent changes in the webpack 5.0 release , `mysql` plugin couldn't be implemented directly onto frontend and hence has to be filtered through a express server, & adding a server increased the user's experience as well
 
-## Learn More
+## Libraries / Framework / packages used :
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+`React.Js` → React is a free and open-source front-end JavaScript library for building user interfaces based on UI components
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+`Material-UI` → Material-UI offers comprehensive range of production-ready UI components which gives great styling options to the application
 
-### Code Splitting
+`Formik` → Build forms in React, with ease
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+`Axios` → Promise based http client for web applications and node js development. It makes fetch requests easier to handle
 
-### Analyzing the Bundle Size
+`express` → Minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications. t is designed for building web applications and APIs
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+`mysql` → A node.js driver for mysql
 
-### Making a Progressive Web App
+## Links :
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Live Links :
 
-### Advanced Configuration
+[Frontend](https://atlan-sql-query-editor.netlify.app/) → https://atlan-sql-query-editor.netlify.app/
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+[Server](https://sql-query-server.herokuapp.com/) → https://sql-query-server.herokuapp.com/query?q={q}
 
-### Deployment
+### Source Code :
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+[Frontend](https://github.com/saikatXshrey/atlan-frontend-challenge/tree/master) → https://github.com/saikatXshrey/atlan-frontend-challenge/tree/master
 
-### `npm run build` fails to minify
+[Server](https://github.com/saikatXshrey/atlan-frontend-challenge/tree/server) → https://github.com/saikatXshrey/atlan-frontend-challenge/tree/server
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Speed Test :
+
+Mobile → 91/100
+
+Desktop → 78/100
+
+[Report 🚀](https://www.browserstack.com/speedlab/report/ace52103e09cbe98b5ecedac9f09c5d0b7c35901)
