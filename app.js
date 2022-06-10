@@ -36,3 +36,6 @@ const start = async () => {
 };
 
 start();
+
+// export -> heroku
+module.exports = app;
