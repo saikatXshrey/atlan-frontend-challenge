@@ -1,6 +1,6 @@
 import React from "react";
 import { DataGrid, GridToolbar } from "@mui/x-data-grid";
-import { Box, Card, Typography, Grid } from "@mui/material";
+import { Box, Card, Grid } from "@mui/material";
 
 // data
 import makeColumns from "./columns";
