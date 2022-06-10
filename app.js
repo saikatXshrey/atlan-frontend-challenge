@@ -16,7 +16,10 @@ const connection = require("./db/connect");
 const { sqlQuery } = require("./controllers");
 
 // end-point
-app.get("/", sqlQuery);
+app.get("/", (req, res) => {
+  res.send("Sql Server!");
+});
+app.get("/query", sqlQuery);
 
 // server start
 const port = process.env.PORT || 4000;
