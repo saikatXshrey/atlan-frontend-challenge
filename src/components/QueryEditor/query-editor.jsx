@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 
 // material-ui
-import { Stack, Button, Grid, TextareaAutosize } from "@mui/material";
+import { Stack, Button, Alert, Grid, TextareaAutosize } from "@mui/material";
 import { styled } from "@mui/material/styles";
 // form & validation
 import * as yup from "yup";
@@ -10,25 +10,29 @@ import { useFormik } from "formik";
 // data
 import { queryServer } from "../../api";
 
-// yup validation object
-// const validationSchema = yup.object({
-//   query: yup.string().required("SQL Query is required!"),
-// });
-
-const QueryEditor = ({ setData }) => {
+const QueryEditor = ({ setBlank, setData }) => {
   const formik = useFormik({
     initialValues: {
       query: "select * from customers;",
     },
 
-    // validationSchema: validationSchema,
-
     onSubmit: ({ query }) => {
       if (!query) {
+        setBlank(true);
+        setData([]);
         console.log("SQL Query is required!");
         return;
       }
-      queryServer(query).then((res) => setData(res));
+
+      queryServer(query)
+        .then((res) => {
+          setData(res);
+          setBlank(false);
+        })
+        .catch(() => {
+          setData([]);
+          setBlank(false);
+        });
     },
   });
 
@@ -40,7 +44,6 @@ const QueryEditor = ({ setData }) => {
         <TextareaAutosize
           aria-label="minimum height"
           minRows={10}
-          // placeholder="select * from customers;"
           style={{
             width: "100%",
             fontSize: "20px",
