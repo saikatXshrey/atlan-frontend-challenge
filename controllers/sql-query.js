@@ -21,7 +21,7 @@ const sqlQuery = async (req, res) => {
     if (error) {
       res
         .status(StatusCodes.BAD_REQUEST)
-        .json({ error: "Error in SQL syntax;" });
+        .json({ error: "Error in SQL syntax" });
     }
 
     // result
