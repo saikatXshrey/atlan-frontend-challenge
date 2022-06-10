@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Box, Grid, Alert, Stack, Typography } from "@mui/material";
 
 // components
-import { QueryEditor, ActionOutput } from "./components";
+import { QueryEditor, ActionOutput, TablesInfo } from "./components";
 
 // data
 import { queryServer } from "./api";
@@ -37,6 +37,9 @@ const App = () => {
           )
         )}
         {data.message && <Alert severity="info">{data.message}</Alert>}
+
+        {/* db table information */}
+        <TablesInfo />
       </Stack>
     </Box>
   );
