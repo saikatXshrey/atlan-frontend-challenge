@@ -13,7 +13,6 @@ app.use(express.json());
 app.use(cors());
 
 // modules
-const connection = require("./db/connect");
 const { sqlQuery } = require("./controllers");
 
 // end-point
@@ -25,18 +24,6 @@ app.get("/query", sqlQuery);
 // server start
 const port = process.env.PORT || 4000;
 
-const start = async () => {
-  try {
-    await connection;
-    app.listen(port, () => {
-      console.log(`Server : http://localhost:${port}`);
-    });
-  } catch (error) {
-    console.log(error);
-  }
-};
-
-start();
-
-// export -> heroku
-module.exports = app;
+app.listen(port, () => {
+  console.log(`Server : port → ${port}`);
+});
