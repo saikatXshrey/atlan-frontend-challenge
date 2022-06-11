@@ -36,7 +36,7 @@ const App = () => {
             <Alert severity="error">SQL Syntactical Error!</Alert>
           )
         )}
-        {data.message && <Alert severity="info">{data.message}</Alert>}
+        {data.info && <Alert severity="info">{data.info}</Alert>}
 
         {/* db table information */}
         <TablesInfo />
