@@ -26,7 +26,7 @@ Web App to Run SQL Query and get results
 
 → Middleware : `morgan`, `cors`
 
-→ Server accepts the SQL query coming from client & forwards it to `mysql` plugin that processes & returns the response in JSON format
+→ Server accepts the SQL query coming from client & forwards it to `mysql2` plugin that processes & returns the response in JSON format
 
 → The JSON response is then sent to front-end
 
@@ -46,7 +46,7 @@ Due to some recent changes in the webpack 5.0 release , `mysql` plugin couldn't 
 
 `express` → Minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications. t is designed for building web applications and APIs
 
-`mysql` → A node.js driver for mysql
+`mysql2` → A node.js driver for mysql
 
 ## Links :
 
