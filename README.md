@@ -54,7 +54,7 @@ Due to some recent changes in the webpack 5.0 release , `mysql` plugin couldn't 
 
 [Frontend](https://atlan-sql-query-editor.netlify.app/) → https://atlan-sql-query-editor.netlify.app/
 
-[Server](https://sql-query-server.herokuapp.com/) → https://sql-query-server.herokuapp.com/query?q={q}
+[Server](https://sql-query-server.herokuapp.com/) → https://sql-query-server.herokuapp.com/query?q=select * from customers;
 
 ### Source Code :
 
