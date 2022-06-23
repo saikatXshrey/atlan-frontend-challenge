@@ -22,7 +22,7 @@ const App = () => {
     <Box m={3}>
       <Stack spacing={5}>
         <Grid container justifyContent="center" alignItems="center">
-          <Typography variant="h2">Atlan Query Editor</Typography>
+          <Typography variant="h2">SQL Workbench🧢</Typography>
         </Grid>
 
         {/* query-space */}
