@@ -1,4 +1,4 @@
-# Atlan SQL Query Editor
+# SQL Workbench
 
 Web App to Run SQL Query and get results
 
