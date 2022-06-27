@@ -30,10 +30,6 @@ Web App to Run SQL Query and get results
 
 → The JSON response is then sent to front-end
 
-#### `P.S` :
-
-Due to some recent changes in the webpack 5.0 release , `mysql` plugin couldn't be implemented directly onto frontend and hence has to be filtered through a express server, & adding a server increased the user's experience as well
-
 ## Libraries / Framework / packages used :
 
 `React.Js` → React is a free and open-source front-end JavaScript library for building user interfaces based on UI components
