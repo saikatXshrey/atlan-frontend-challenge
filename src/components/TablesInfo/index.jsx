@@ -11,7 +11,7 @@ const TablesInfo = () => {
   return (
     <Grid container>
       <Grid item xs={12} gutterBottom>
-        <Typography variant="h2">DB Tables Information</Typography>
+        <Typography variant="h2">Default DB Tables</Typography>
       </Grid>
 
       <Grid container spacing={3}>

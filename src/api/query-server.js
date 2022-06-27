@@ -3,7 +3,7 @@ import axios from "axios";
 const queryServer = async (q) => {
   const { data } = await axios({
     method: "GET",
-    url: "https://another-one-server.herokuapp.com/query",
+    url: "https://sql-workbench-server.herokuapp.com/query",
     params: { q },
   });
 
