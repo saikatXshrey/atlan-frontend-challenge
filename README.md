@@ -54,9 +54,9 @@ Web App to Run SQL Query and get results
 
 ### Source Code :
 
-[Frontend](https://github.com/saikatXshrey/atlan-frontend-challenge/tree/master) → https://github.com/saikatXshrey/atlan-frontend-challenge/tree/master
+[Frontend](https://github.com/saikatXshrey/sql-workbench/tree/master) → https://github.com/saikatXshrey/sql-workbench/tree/master
 
-[Server](https://github.com/saikatXshrey/atlan-frontend-challenge/tree/server) → https://github.com/saikatXshrey/atlan-frontend-challenge/tree/server
+[Server](https://github.com/saikatXshrey/sql-workbench/tree/server) → https://github.com/saikatXshrey/sql-workbench/tree/server
 
 ## Speed Test :
 
