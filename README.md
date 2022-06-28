@@ -48,9 +48,9 @@ Web App to Run SQL Query and get results
 
 ### Live Links :
 
-[Frontend](https://atlan-sql-query-editor.netlify.app/) → https://atlan-sql-query-editor.netlify.app/
+[Frontend](https://sql-workbench.netlify.app/) → https://sql-workbench.netlify.app/
 
-[Server](https://another-one-server.herokuapp.com/) → https://another-one-server.herokuapp.com/query?q={q}
+[Server](https://sql-workbench-server.herokuapp.com/) → https://sql-workbench-server.herokuapp.com/
 
 ### Source Code :
 
